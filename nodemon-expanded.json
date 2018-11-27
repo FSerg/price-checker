@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "signal": "SIGINT",
+  "watch": ["src/"],
+  "delay": "2000",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,json",
+  "exec": "BABEL_DISABLE_CACHE=1 babel-node -- ./src/index"
+}
