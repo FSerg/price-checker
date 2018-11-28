@@ -1,4 +1,4 @@
-FROM node:9.4
+FROM node:11.2
 
 # Commands will run in this directory
 WORKDIR /usr/src/app
