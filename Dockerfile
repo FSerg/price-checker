@@ -1,4 +1,4 @@
-FROM node:11.2
+FROM arm32v7/node:11.2
 
 # Commands will run in this directory
 WORKDIR /usr/src/app
