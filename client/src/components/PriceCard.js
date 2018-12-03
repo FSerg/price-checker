@@ -20,18 +20,26 @@ const PriceCard = ({ PriceItem }) => {
     <div>
       <Segment.Group>
         <Segment padded secondary>
-          <Header size="huge">{ProductName}</Header>
+          <Header size="huge" style={{ fontSize: "2.5em" }}>
+            {ProductName}
+          </Header>
         </Segment>
         <Segment size="big">
           <Grid columns={2}>
             <Grid.Row>
               <Grid.Column>
-                <p>Производитель: {ProducerName}</p>
+                <p style={{ fontSize: "1.5em" }}>
+                  Производитель: {ProducerName}
+                </p>
 
                 <p>Ед.измерения: {UnitName}</p>
               </Grid.Column>
               <Grid.Column textAlign="right">
-                <Label size="massive" color="blue">
+                <Label
+                  size="massive"
+                  color="blue"
+                  style={{ padding: "0.5em", fontSize: "4em" }}
+                >
                   {Price} р.
                 </Label>
               </Grid.Column>

@@ -12,7 +12,14 @@ RUN cd client && \
     \
     yarn install
 
-RUN chmod +x run
+# Install dependencies
+RUN cd client && \
+    yarn build && \
+    cd .. &&\
+    \
+    yarn build
+
+ENV NODE_ENV production
 
 # Build app and start server from script
-CMD ["/usr/src/app/run"]
+CMD ["yarn", "start"]

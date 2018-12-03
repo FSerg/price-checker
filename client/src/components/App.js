@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Container, Form, Divider, Message } from "semantic-ui-react";
+import { Container, Form, Header, Message } from "semantic-ui-react";
 import PriceCard from "./PriceCard";
 
 class App extends Component {
@@ -42,8 +42,8 @@ class App extends Component {
 
   render() {
     return (
-      <Container style={{ paddingTop: "5em" }}>
-        <Form onSubmit={this.handleFormSubmit}>
+      <Container style={{ paddingTop: "4em" }}>
+        <Form onSubmit={this.handleFormSubmit} style={{ paddingBottom: "2em" }}>
           <Form.Input
             autoFocus
             fluid
@@ -54,11 +54,10 @@ class App extends Component {
             onChange={e => this.handleInput(e)}
           />
         </Form>
-        <Divider horizontal>Результаты поиска</Divider>
 
         {this.state.ErrorMessage ? (
           <Message negative>
-            <p>{this.state.ErrorMessage}</p>
+            <Header size="large">{this.state.ErrorMessage}</Header>
           </Message>
         ) : null}
 
